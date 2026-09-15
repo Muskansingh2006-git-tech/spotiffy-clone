@@ -132,6 +132,8 @@
     display: flex;
     position: relative;
     flex: 0 0 auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     gap: 10px;
    :hover{
     transition: all 3s;
@@ -309,22 +311,16 @@
     cursor: pointer;
     filter: invert(2);
 }
-@media (max-width:1400px){
+@media (max-width:768px){
     .left .close{
         position: absolute;
         right: 31px;
         top: 25px;
         width: 29px;
     }
-    .playbar{
-        width: 95vw;
-    }
-    .seekbar{
-        width: 90%;
-    }
     .container {
         flex-direction: column;
-        width: 100%;
+        width: 90%;
     }
 
     .left {
@@ -345,13 +341,20 @@
     }
 
     .seekbar {
-        width: 90%;
+        width: 80%;
     }
 
     .playback img {
         width: 25px;
         height: 25px;
     }
+    .left {
+    display: none;
+}
+
+   .left.show {
+    display: block;
+}
 
 
 }
@@ -360,4 +363,5 @@
     height: 40px;
     justify-content: space-between;
     display: flex;
+    filter: invert(1);
 }

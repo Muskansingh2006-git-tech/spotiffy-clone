@@ -80,3 +80,9 @@ seekbar.addEventListener("click", (e) => {
     currentSong.currentTime =
         (currentSong.duration * percent) / 100;
 });
+let menu = document.getElementById("menu");
+let left = document.querySelector(".left");
+
+menu.addEventListener("click", () => {
+    left.classList.toggle("show");
+});

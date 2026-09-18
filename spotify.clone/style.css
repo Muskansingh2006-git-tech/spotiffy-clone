@@ -122,18 +122,16 @@
     height: auto;
     gap: 10px;
     margin: 10px;
+    flex: 0 0 auto;
     padding: 10px;
     background-color: #3b3b3b;
-    flex: 0 0 auto;
     position: relative;
     
 }
 .card-container {
     display: flex;
     position: relative;
-    flex: 0 0 auto;
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow-x: auto;
     gap: 10px;
    :hover{
     transition: all 3s;
@@ -310,6 +308,34 @@
     height: 30px;
     cursor: pointer;
     filter: invert(2);
+}
+.song .songtime{
+    margin: 20px;
+}
+.volume {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    filter: invert(1);
+}
+
+.volume img {
+    width: 25px;
+    height: 25px;
+}
+
+.volumeBar {
+    width: 100px;
+    cursor: pointer;
+}
+.seek{
+    position: absolute;
+    bottom: 1px;
+    left: 5%;
+    width: 20%;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
 }
 @media (max-width:768px){
     .left .close{
